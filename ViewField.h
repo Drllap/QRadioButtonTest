@@ -5,7 +5,8 @@
 class ViewField : public QWidget
 {
 public:
-    ViewField()
+    ViewField(QWidget* parent = nullptr)
+        : QWidget(parent)
     {
         auto vf = new Ui::ViewField();
         vf->setupUi(this);

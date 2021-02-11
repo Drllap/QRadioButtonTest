@@ -8,10 +8,11 @@ class MainWindow : public QMainWindow
 {
 
 public:
-    MainWindow()
+    MainWindow(QWidget* parent = nullptr)
+        : QMainWindow()
     {
         setStyleSheet("QRadioButton { color: red};");
-        setCentralWidget(new ViewField);
+        setCentralWidget(new ViewField(this));
     }
 };
 
